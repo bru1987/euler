@@ -23,3 +23,6 @@ paginate:         5
 github:
   repo:           https://github.com/bru1987/euler
 repository:       euler/bru1987
+
+disqus:
+  shortname: bru_1987
