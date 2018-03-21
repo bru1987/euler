@@ -16,7 +16,7 @@ author:
   name:           'Bruno Silva'
   url:            https://www.instagram.com/bruno.3s
 
-#version:          1.0
+version:          1.0
 
 paginate:         5
 
