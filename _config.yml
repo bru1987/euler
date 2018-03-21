@@ -6,9 +6,9 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Hyde
+title:            Euler in Python
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      'A website with the solutions to a few of the <a href="http://www.eulerproject.com" target="_blank">Euler Project's</a> challenges. Made with love by <a href="https://www.instagram.com/bruno.3s" target="_blank">@bruno.3s</a>.'
 # url:              http://hyde.getpoole.com
 baseurl:          /euler
 
