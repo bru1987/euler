@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Euler in Python
 tagline:          'A Jekyll theme'
-description:      'A website with the solutions to a few of the <a href="http://www.eulerproject.com" target="_blank">Euler Project's</a> challenges. Made with love by <a href="https://www.instagram.com/bruno.3s" target="_blank">@bruno.3s</a>.'
+description:      'A website with the solutions to a few of the <a href="http://www.eulerproject.com" target="_blank">Euler Project''s</a> challenges. Made with love by <a href="https://www.instagram.com/bruno.3s" target="_blank">@bruno.3s</a>.'
 # url:              http://hyde.getpoole.com
 baseurl:          /euler
 
