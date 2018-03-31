@@ -13,5 +13,7 @@ If you would like to know more about me, make sure you visit:
 
 * [My personal website](http://www.bruno3s.com.br)
 * [My GitHub profile](https://www.github.com/bru1987)
+* [My Linkedin profile](https://www.github.com/bru1987)
+* [My email](mailto:bru1987@gmail.com)
 
 Thank you!
