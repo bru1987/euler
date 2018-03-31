@@ -3,7 +3,9 @@ layout: page
 title: About
 ---
 
-Hello! Let me introduce myself: I'm Bruno, a Brazilian Engineer who is passionate about *learning* and *teaching*. I've started this project as a challenge to improve my programming skills. 
+Hey! 
+
+I'm Bruno, a Brazilian Engineer who is passionate about *learning* and *teaching*. I've started this project as a challenge to improve my programming skills. 
 
 All the solutions to the problems have been created using a combo of [Jupyter notebooks](http://jupyter.org/) + [Jekyll](https://jekyllrb.com/) hosted on [GitHub Pages](https://pages.github.com/). You'll find a [Disqus](https://disqus.com/) chat at the end of each post. Feel free to reach me there.
 
