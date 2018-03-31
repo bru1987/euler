@@ -10,6 +10,6 @@ All the solutions to the problems have been created using a combo of [Jupyter no
 If you would like to know more about me, make sure you visit:
 
 * [My personal website](http://www.bruno3s.com.br)
-* [My Github page](https://www.github.com/bru1987)
+* [My GitHub profile](https://www.github.com/bru1987)
 
 Thank you!
