@@ -7,7 +7,7 @@ Hello! Let me introduce myself: I'm Bruno, a Brazilian Engineer who is passionat
 
 All the solutions to the problems have been created using a combo of [Jupyter notebooks](http://jupyter.org/) + [Jekyll](https://jekyllrb.com/) hosted on [GitHub Pages](https://pages.github.com/). You'll find a [Disqus](https://disqus.com/) chat at the end of each post. Feel free to reach me there.
 
-If you would like to contact me, make sure you visit:
+If you would like to know more about me, make sure you visit:
 
 * [My personal website](http://www.bruno3s.com.br)
 * [My Github page](https://www.github.com/bru1987)
