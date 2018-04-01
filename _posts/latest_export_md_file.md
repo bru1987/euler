@@ -1,7 +1,3 @@
----
-layout: post
-title: Project Euler - Problem 2
----
 
 ## Problem #2
 
