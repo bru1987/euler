@@ -86,18 +86,6 @@ solution_2(4000000)
     4613732 1.2159347534179688e-05
 
 
-
-```python
-np.sum(evens)
-```
-
-
-
-
-    4613732
-
-
-
 ### Comparison of the methods
 
 Let's check which solution has the best performance:
