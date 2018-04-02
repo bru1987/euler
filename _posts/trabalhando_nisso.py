@@ -11,41 +11,58 @@ def new_approach(n):
     start = time.time()
 
     # We'll check primes up until this number
-    largest_divisor = int(n/2)
+    largest_possible_divisor = int(n/2)
     flag_prime = 0
+    flag_divisor = 0
 
-    if largest_divisor % 2 == 0:
-        largest_divisor = largest_divisor - 1
+    if largest_possible_divisor % 2 == 0:
+        largest_possible_divisor = largest_possible_divisor - 1
 
-    while (largest_divisor > 1):
-        # Let's see if i is a divisor of n, starting by half of n, which is variable largest_divisor
+    for i in range (largest_possible_divisor,1,-1):
+        # Let's see if i is a divisor of n, starting by half of n, which is variable largest_possible_divisor
         if (n % i == 0):
             flag_divisor = 1
             # i is a divisor of the original number, so let's check if it's a prime
             sum_of_digits = sum_digits(i)
             ## checking if i is a prime
-            for ii in range (i-1,1,-2):
-                #it's not required to check if it's even
-                if (sum_of_digits % 3 == 0):
+            for ii in range (i-1,1,-1):
+                if (i % 2 == 0):
+                    # checking divisibility by 2
                     # not a prime
                     flag_prime = 0
+                    break
+                elif (sum_of_digits % 3 == 0):
+                    # checking divisibility by 3
+                    # not a prime
+                    flag_prime = 0
+                    break
+                elif (i % 10 == 0 or i % 10 == 5):
+                    # checking divisibility by 5
+                    # not a prime
+                    flag_prime = 0
+                    break
                 elif (i % ii == 0):
+                    # checking divisibility by any number
                     # not a prime
                     flag_prime = 0
+                    break
                 else:
-                    #it's a prime
+                    # it may be a prime, keep looping
                     flag_prime = 1
+                    # break
         else:
-            largest_divisor = largest_divisor - 1
+            flag_divisor = 0
+
         if flag_prime == 1:
             break
 
-    largest_divisor = i
+    largest_possible_divisor = i
 
     elapsed = time.time() - start
 
-    print (largest_divisor,"\n", elapsed,"\n")
+    print (largest_possible_divisor,"\n", elapsed,"\n")
     
     return
 
-new_approach(40)
+new_approach(60085147)
+# 600851475143
