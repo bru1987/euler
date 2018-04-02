@@ -1,51 +1,51 @@
 import time
 
+def sum_digits(n):
+   r = 0
+   while n:
+       r, n = r + n % 10, n // 10
+   return r
+
 def new_approach(n):
 
     start = time.time()
 
     # We'll check primes up until this number
-    middle = int(n/2)
-    largest = middle
-    list = [1]
+    largest_divisor = int(n/2)
+    flag_prime = 0
 
-    for i in range (middle,2,-1):
-        # Vamos avaliar se i é divisor do original n, começando pela metade dele
+    if largest_divisor % 2 == 0:
+        largest_divisor = largest_divisor - 1
+
+    while (largest_divisor > 1):
+        # Let's see if i is a divisor of n, starting by half of n, which is variable largest_divisor
         if (n % i == 0):
-            # i é divisor, precisamos ver se é prime
-            for ii in range (i-1,2,-1): # Finalizando com o 2 já que obviamente todos são divisíveis por 1
-                largest = i # Here we can modify the "check if it's a prime" part of the algorithm
-                
-                if (par):
-                    prime = 0
-                    break
-                
-                elif (soma dos algarismos % 3 == 0)
-                    prime = 0
-                    break
-
-                elif (last two digits % 4 == 0)
-                    prime = 0
-                    break
-                
+            flag_divisor = 1
+            # i is a divisor of the original number, so let's check if it's a prime
+            sum_of_digits = sum_digits(i)
+            ## checking if i is a prime
+            for ii in range (i-1,1,-2):
+                #it's not required to check if it's even
+                if (sum_of_digits % 3 == 0):
+                    # not a prime
+                    flag_prime = 0
                 elif (i % ii == 0):
-                    # i is not a prime
-                    prime = 0
-                    break
-
+                    # not a prime
+                    flag_prime = 0
                 else:
-                    # é primo
-                    primo = 1
+                    #it's a prime
+                    flag_prime = 1
+        else:
+            largest_divisor = largest_divisor - 1
+        if flag_prime == 1:
+            break
 
-            if primo == 1:
-                break
-
-    largest = i
+    largest_divisor = i
 
     elapsed = time.time() - start
 
-    print (largest,"\n", elapsed,"\n", list)
+    print (largest_divisor,"\n", elapsed,"\n")
     
     return
 
-new_approach(1319574)
+new_approach(40)
