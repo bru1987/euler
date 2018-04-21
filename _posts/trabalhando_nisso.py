@@ -1,68 +1,32 @@
+from math import sqrt
 import time
 
-def sum_digits(n):
-   r = 0
-   while n:
-       r, n = r + n % 10, n // 10
-   return r
+def trial_division_primes(n):
+    factors = []
+    for i in range (2,int(sqrt(n))):
+        if n % i == 0:
+            factors.append(i)
+            factors.append(int(n/i))
 
-def new_approach(n):
-
-    start = time.time()
-
-    # We'll check primes up until this number
-    largest_possible_divisor = int(n/2)
-    flag_prime = 0
-    flag_divisor = 0
-
-    if largest_possible_divisor % 2 == 0:
-        largest_possible_divisor = largest_possible_divisor - 1
-
-    for i in range (largest_possible_divisor,1,-1):
-        # Let's see if i is a divisor of n, starting by half of n, which is variable largest_possible_divisor
-        if (n % i == 0):
-            flag_divisor = 1
-            # i is a divisor of the original number, so let's check if it's a prime
-            sum_of_digits = sum_digits(i)
-            ## checking if i is a prime
-            for ii in range (i-1,1,-1):
-                if (i % 2 == 0):
-                    # checking divisibility by 2
-                    # not a prime
-                    flag_prime = 0
-                    break
-                elif (sum_of_digits % 3 == 0):
-                    # checking divisibility by 3
-                    # not a prime
-                    flag_prime = 0
-                    break
-                elif (i % 10 == 0 or i % 10 == 5):
-                    # checking divisibility by 5
-                    # not a prime
-                    flag_prime = 0
-                    break
-                elif (i % ii == 0):
-                    # checking divisibility by any number
-                    # not a prime
-                    flag_prime = 0
-                    break
-                else:
-                    # it may be a prime, keep looping
-                    flag_prime = 1
-                    # break
-        else:
-            flag_divisor = 0
-
-        if flag_prime == 1:
-            break
-
-    largest_possible_divisor = i
-
-    elapsed = time.time() - start
-
-    print (largest_possible_divisor,"\n", elapsed,"\n")
+    factors.sort()        
+    prime_factors = factors
+    to_remove = []
     
-    return
+    for i in range (len(factors)-1,0,-1):
+        a = i-1
+        for ii in range (a,-1,-1):
+            if prime_factors[i] % prime_factors[ii] == 0:
+                to_remove.append(prime_factors[i])
+            a = a - 1
+    
+    prime_factors = list(set(set(prime_factors) - set(to_remove)))
 
-new_approach(60085147)
-# 600851475143
+    return prime_factors
+
+start = time.time()
+
+prime_factors = trial_division_primes(600851475143)
+prime_factors.sort()
+print (prime_factors)
+              
+elapsed = time.time() - start
