@@ -5,7 +5,7 @@ title: About
 
 Hey! 
 
-my name is Bruno, a Brazilian Engineer who is passionate about *learning* and *teaching*. I've started this website so I could share my solutions to a few of the [Project Euler's](https://projecteuler.net/) problems while forcing me to keep on improving my programming skills. The language of choie here is Python, but you may benefit from the website even if you are a *C#* or a *Ruby* programmer.
+my name is Bruno, a Brazilian Engineer who is passionate about *learning* and *teaching*. I've started this website so I could share my solutions to a few of the [Project Euler's](https://projecteuler.net/) problems while forcing me to keep on improving my programming skills. The language of choice here is Python, but you may benefit from the website even if you are a *C#* or a *Ruby* programmer.
 
 As described on Project Euler's website, *Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.*
 
