@@ -112,11 +112,15 @@ print (elapsed)
 
 Yes we will have an issue with this.
 
-## Improvements on the algorithm
-
 ### Solution #2 - Trial Division algorithm
 
-(explain trial division...)
+Trial division is the simplest algorithm for factoring an integer. Assume that $a$ and $b$ are nontrivial factors of $n$ such that $ab = n$ and $a \leq b$. To perform the trial division algorithm, one simply checks wether $\frac{a}{n}$ for $a = 2, 3, \cdots, \sqrt{n}$. 
+
+When such a divisor $a$ is found, then $b = \frac{n}{a}$ is also a factor. After going through all possible integers, factorization has been found for $n$. The following procedure is valid due to the following theorem.
+
+**Theorem** If $n$ has nontrivial factors $a$ and $b$ with $ab = n$ and $a \leq b$ then $a \leq \sqrt{n}$
+
+**Proof** Assume $a > \sqrt{n}$. Then $b \leq a < \sqrt{n}$ and $ab > n$. That contradicts the assumption that $ab = n$. Hence $a \leq n$.
 
 
 ```python
