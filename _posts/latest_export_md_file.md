@@ -1,58 +1,50 @@
 
-## Problem #4
+## Problem #5
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is $9009 = 91 \cdot 99$.
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
-Find the largest palindrome made from the product of two 3-digit numbers.
+What is the smallest positive number that is **evenly divisible** by all of the numbers from 1 to 20?
 
 ### Solution #1
 
-For this specific problem brute-forcing works like a charm. In the following code, the function ´check_palindrome()´ makes sure that the product we get is a palindrome.
-
 
 ```python
-def check_palindrome(a):
-    # We need to know how many characters are in the number so let's first convert it to a string
-    a = str(a)
-    # evaluating it's size
-    string_size = len(a)
-    # at first, let's assume it's not a palindrome
-    palindrome = False
+import math
 
-    if string_size % 2 != 0:
-        stop = int((string_size - 1) / 2)
-    else:
-        stop = int(string_size / 2)
-        
-    # Checking all numbers
-    for i in range(0,stop+1):
-        if a[i] != a[-i-1]:
-            palindrome = False
+# let's setthe floor first
+def primes_up_to(n):
+    product = 2
+
+    for candidate_for_prime in range (3,n+1):
+        for i in range (2,candidate_for_prime): 
+            if (candidate_for_prime % i == 0):
+                break
+            elif ((candidate_for_prime % i != 0) & (i + 1 == candidate_for_prime)):
+                product *= candidate_for_prime
+                
+    return product
+    
+divisible_up_to = 20
+floor = primes_up_to(divisible_up_to)
+
+# the highest we can go is to n! (n factorial)
+ceiling = math.factorial(divisible_up_to)
+
+found = False
+
+for ii in range (floor,ceiling):
+    for i in range(2,divisible_up_to+1):
+        if ii % i != 0:
             break
-        elif i == stop:
-            palindrome = True
+        elif i == divisible_up_to:
+            print (ii)
+            found = True
+            break
+    
+    if found:
+        break
 
-    return palindrome
-
-numbers_to_use = list(range(1,999))
-largest_palindrome_yet = 0
-
-# here the loops check the product and, if is is bigger than the number we currently have, 
-# it checks if it's a palindrome
-for i in range(len(numbers_to_use)+1,0,-1):
-    for ii in range(len(numbers_to_use)+1,0,-1):
-        possible_palindrome = i*ii
-        # check if the multiplication is larger than the largest_pal_yet
-        if possible_palindrome > largest_palindrome_yet:
-            # check if it's a palindrome
-            palindrome = check_palindrome(possible_palindrome)
-            if palindrome:
-                largest_palindrome_yet = possible_palindrome
-                a=i
-                b=ii
-
-print ("The largest palindrome we can build is ",largest_palindrome_yet," , which is the product of ", a, " and ", b)
 ```
 
-    The largest palindrome we can build is  906609  , which is the product of  993  and  913
+    232792560
 
