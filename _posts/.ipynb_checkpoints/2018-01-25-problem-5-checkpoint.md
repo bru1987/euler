@@ -1,3 +1,9 @@
+---
+layout: post
+title: Project Euler - Problem 5
+post-order: 005
+---
+
 
 ## Problem #5
 
