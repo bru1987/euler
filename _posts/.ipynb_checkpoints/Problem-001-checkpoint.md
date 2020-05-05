@@ -1,6 +1,11 @@
 ---
 layout: post
+<<<<<<< HEAD:_posts/2020-05-05-problem-1.md
+title:  Project Euler - Problem 1
+=======
 title: Project Euler - Problem 1
+post-order: 001
+>>>>>>> 8ee00623c28d5b0554a04a654a4dd831589eae98:_posts/.ipynb_checkpoints/Problem-001-checkpoint.md
 ---
 
 
@@ -25,7 +30,7 @@ def solution_1 (n): # in this case n = 1000
 
     for i in range (1,n):
         if (i % 3 == 0 or i % 5 == 0):
-        # if the number is divisible by 3 or 5
+        # if the number is divisible by 3 or 5 
         # we add it to the variable sum
             sum += i
 
