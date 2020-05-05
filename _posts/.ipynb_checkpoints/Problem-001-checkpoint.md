@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  Project Euler - Problem 1
+title: Project Euler - Problem 1
 post-order: 001
 ---
+
 ## Problem #1
 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -11,7 +12,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 ### Solution #1
 
-This is the brute force method. On the solution below, a counter is initiated from 1 up until 1000. Whenever i is a multiple of 3 or 5 (something that can be easily cheked with the modulus operator `%`), the variable `sum` (initiated in zero) will be incremented of `i`. The flowchart can be found [here](https://drive.google.com/file/d/1w72SewUXMZ-fArXdZ6vG1b1EZ8qTqmu7/view?usp=sharing).
+This is the brute force method. On the solution below, a counter is initiated from 1 up until 1000. Whenever i is a multiple of 3 or 5 (something that can be easily cheked with the modulus operator `%`), the variable `sum` (initiated in zero) will be incremented of `i`. The flowchart can be found XXX here XXX.
 
 
 ```python
@@ -24,7 +25,7 @@ def solution_1 (n): # in this case n = 1000
 
     for i in range (1,n):
         if (i % 3 == 0 or i % 5 == 0):
-        # if the number is divisible by 3 or 5
+        # if the number is divisible by 3 or 5 
         # we add it to the variable sum
             sum += i
 
@@ -36,12 +37,13 @@ def solution_1 (n): # in this case n = 1000
 solution_1(1000)
 ```
 
-    233168 Elapsed time:  0.0001442432403564453 s
+    233168 Elapsed time:  0.00014400482177734375 s
 
 
 ### Solution #2
 
 A different approach would be to create three number lists: one with all multiples of 3, another with multiples of 5 and finally a list with multiples of 15 (3 times 5). We'll add the items of the first two lists and subtract the third list. To implement this solution, we will need to use `numpy`.
+
 
 ```python
 import time
@@ -68,7 +70,7 @@ def solution_2 (n): # in this case n = 1000
 solution_2(1000)
 ```
 
-    233168 Elapsed time:  0.0011599063873291016 s
+    233168 Elapsed time:  0.0001010894775390625 s
 
 
 By quickly evaluating the two, you may think that there are no improvements on the methods described. Let's check if that is the case.
