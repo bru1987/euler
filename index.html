@@ -22,11 +22,6 @@ title: Home
 </div>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Higher</a>
-  {% else %}
-    <span class="pagination-item older">Higher</span>
-  {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
       <a class="pagination-item newer" href="{{ "/" | relative_url }}">Lower</a>
@@ -35,5 +30,10 @@ title: Home
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Lower</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Higher</a>
+  {% else %}
+    <span class="pagination-item older">Higher</span>
   {% endif %}
 </div>
